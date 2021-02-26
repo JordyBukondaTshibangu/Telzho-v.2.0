@@ -25,7 +25,7 @@ const Home = props => {
             <div className="home__body">
                 <img src={Logo} alt="/" />
                 <div className="home__inputContainer">
-                    <Search/>
+                    <Search />
                 </div>
             </div>
         </div>

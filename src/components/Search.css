@@ -33,3 +33,6 @@
     text-transform: inherit;
     color: #5f6368;
 }
+.search_buttonHidden {
+    display: none !important; 
+}
