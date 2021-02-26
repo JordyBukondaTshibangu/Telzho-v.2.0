@@ -4,8 +4,8 @@ import { Button } from '@material-ui/core';
 import MicIcon from '@material-ui/icons/Mic';
 import { useHistory } from 'react-router-dom';
 import './Search.css';
-import { useStateValue } from '../StateProvider';
-import { actionTypes } from '../reducer';
+import { useStateValue } from '../../StateProvider';
+import { actionTypes } from '../../reducer';
 
 
 const Search = ({hideButton = false }) => {

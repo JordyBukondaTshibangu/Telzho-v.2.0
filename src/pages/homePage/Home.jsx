@@ -3,11 +3,10 @@ import AppsIcon from '@material-ui/icons/Apps';
 import { Avatar, Button } from '@material-ui/core';
 import './Home.css';
 import Logo from '../../assets/logo.jpeg';
-import Search from '../../components/Search';
+import Search from '../../components/search/Search';
 
 const Home = props => {
     
-
     return (
         <div className="home">
             <div className="home__header">

@@ -1,5 +1,7 @@
-import Home from './pages/homePage/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './pages/homePage/Home';
+import SearchPage from './pages/searchPage/SearchPage';
+
 
 
 const  App = () => {
@@ -7,9 +9,7 @@ const  App = () => {
     <Router>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/search" exact >
-            HOME PAGE 
-        </Route>
+        <Route path="/search" exact component={SearchPage} />
       </Switch>
     </Router>
   );
