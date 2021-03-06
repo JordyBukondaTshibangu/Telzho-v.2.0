@@ -1,3 +1,6 @@
+.searchPage {
+    background-color: #f8f8f8;
+}
 .searchPage__header {
     display: flex;
     position: sticky;

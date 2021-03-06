@@ -1,0 +1,15 @@
+.latestNews__container {
+    display: flex;
+    width: 500px;
+    height: 300px;
+    margin: 100px auto;
+    border: 1px solid #000;
+}
+.latestNews__header {
+    width: 500px;
+    background-color: green;
+}
+.latestNews__header img {
+    width: 100%;
+    height: 300px;
+}

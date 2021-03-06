@@ -9,6 +9,8 @@ import { actionTypes } from '../../reducer';
 
 
 const Search = ({hideButton = false }) => {
+    
+    console.log(hideButton);
 
     const history = useHistory()
     const [ input, setInput ] = useState("");
@@ -30,21 +32,6 @@ const Search = ({hideButton = false }) => {
                 <input type="text" value={input} onChange={ e => setInput(e.target.value)}/>
                 <MicIcon />
             </div>
-            {
-                !hideButton ? 
-                (
-                    <div className="search__buttons">
-                        <Button variant="outlined" type="submit" onClick={search} >Google Search</Button>
-                        <Button variant="outlined">I'm feeling Lucky</Button>
-                    </div>
-                ) : 
-                (
-                    <div className="search__buttons">
-                        <Button className="search_buttonHidden" variant="outlined" type="submit" onClick={search} >Google Search</Button>
-                        <Button className="search_buttonHidden" variant="outlined">I'm feeling Lucky</Button>
-                    </div>
-                )
-            }
         </form>
     )
 }
