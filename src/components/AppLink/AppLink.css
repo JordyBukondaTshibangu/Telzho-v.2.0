@@ -20,3 +20,21 @@
     text-decoration: none;
     color: #fff;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .app-container {
+        width: 65px;
+        height: 40px;
+        margin-top: 50px;
+        margin-left: 15px;
+        border-radius: 15px;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .app-container a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 10px;
+    }
+
+}

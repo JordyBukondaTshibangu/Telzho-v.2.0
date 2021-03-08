@@ -5,7 +5,6 @@ const AppLink = props => {
 
     const { text, background, logo, url  } = props.app
 
-    console.log(url);
     
     return (
         <div className="app-container" style={{backgroundColor : background}}>

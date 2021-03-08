@@ -27,3 +27,24 @@
     grid-template-columns: 1fr 1fr;
     height: 100vh;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .news-container {
+        width: 100vw;
+        padding-left: 25px;
+    }
+    .news-topic {
+        /* margin: 50px; */
+    }
+    .topics-list {
+        display: none;
+    }
+    .news-section {
+        display: grid;
+        margin: 0;
+        grid-template-columns: 1fr;
+        height: 100vh;
+        width: 100%;
+    }
+}

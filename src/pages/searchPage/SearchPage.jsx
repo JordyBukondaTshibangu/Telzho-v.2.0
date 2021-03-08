@@ -18,7 +18,6 @@ const SearchPage = props => {
     const [{term}, dispatch ] = useStateValue();
     const { data } = useGoogleSearch(term)
 
-    console.log(data);
     return (
         <div className="searchPage">
             <div className="searchPage__header">
@@ -28,40 +27,6 @@ const SearchPage = props => {
                 <div className="searchPage__headerBody">
                     <Search hideButton />
                     <div className="searchPage__options">
-                        <div className="searchPage__optionsLeft">
-                            <div className="searchPage__option">
-                                <SearchIcon />
-                                <Link to="/all">All</Link>
-                            </div>
-                            <div className="searchPage__option">
-                                <DescriptionIcon />
-                                <Link to="/news">News</Link>
-                            </div>
-                            <div className="searchPage__option">
-                                <ImageIcon />
-                                <Link to="/images">Images</Link>
-                            </div>
-                            <div className="searchPage__option">
-                                <LocalOfferIcon />
-                                <Link to="/shopping">Shopping</Link>
-                            </div>
-                            <div className="searchPage__option">
-                                <RoomIcon />
-                                <Link to="/maps">maps</Link>
-                            </div>
-                            <div className="searchPage__option">
-                                <MoreVertIcon />
-                                <Link to="/more">more</Link>
-                            </div>
-                        </div>
-                        <div className="searchPage__optionsRight">
-                            <div className="searchPage__option">
-                                <Link to="/settings">Settings</Link>
-                            </div>
-                            <div className="searchPage__option">
-                                <Link to="/tools">Tools</Link>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -72,8 +37,8 @@ const SearchPage = props => {
                             About { data?.searchInformation.formattedTotalResults} results in ({data?.searchInformation.formattedSearchTime}) for { term }
                         </p>
                         {
-                            data?.items.map(item => (
-                                <div className="searchPage__result">
+                            data?.items.map((item, index) => (
+                                <div className="searchPage__result" key={index}>
                                     <a href={item.link}>
                                         {  item.pagemap?.cse_image?.length > 0 && 
                                             item.pagemap?.cse_image[0]?.src && (

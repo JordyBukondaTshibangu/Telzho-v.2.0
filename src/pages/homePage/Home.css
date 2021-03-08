@@ -45,3 +45,30 @@
     align-items: center;
     margin-top: 70px;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .home {
+        width: 100vw;
+        height: 100%;
+        margin: 0;
+    }
+    .home__body {
+        display: flex;
+        margin-top: 5%;
+        flex-direction: column;
+        width: 100vw;
+    }
+    .home__body > img {
+        object-fit: contain;
+        height: 150px;
+        width: 100%;
+        margin: 30px 20px 10px 60px;
+    }
+    
+    .home__body .home__appsContainer {
+        margin-top: 5px;
+        padding-left: 0;
+        margin-left: -20px;
+        width: 100vw;
+    }
+}

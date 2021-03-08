@@ -10,7 +10,6 @@ import { actionTypes } from '../../reducer';
 
 const Search = ({hideButton = false }) => {
     
-    console.log(hideButton);
 
     const history = useHistory()
     const [ input, setInput ] = useState("");
@@ -22,11 +21,12 @@ const Search = ({hideButton = false }) => {
             type : actionTypes.SET_SEARCH_TERM,
             term : input
         })
+
         history.push('/search')
     }
 
     return (
-        <form className="search">
+        <form className="search" onSubmit={search}>
             <div className="search__input">
                 <SearchIcon className="search__inputIcon" />
                 <input type="text" value={input} onChange={ e => setInput(e.target.value)}/>
