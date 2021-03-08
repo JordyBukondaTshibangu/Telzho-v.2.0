@@ -1,0 +1,7 @@
+.external-app-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 20px 50px;
+    margin: 20px auto;
+    width: 80vw;
+}

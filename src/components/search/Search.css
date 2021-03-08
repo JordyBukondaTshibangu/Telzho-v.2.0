@@ -1,11 +1,10 @@
 .search__input {
     display: flex;
     align-items: center;
-    border: 1px solid lightgray;
+    border: 2px solid lightgray;
     padding: 10px 20px;
     height: 30px;
-    border-radius: 999px;
-    width: 75vw;
+    width: 80vw;
     margin: 0 auto;
     margin-top: 40px;
     max-width: 560px;

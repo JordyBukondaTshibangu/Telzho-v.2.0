@@ -11,10 +11,10 @@ const News = ({news}) => {
             <div className="latestNews__header">
                 <img src={urlToImage} alt="/" />
             </div>
-            <div>
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <span>{author}</span>
+            <div className="latestNews__body">
+                <h3 className="latestNews__title">{title}</h3>
+                <p className="latestNews__description">{description}</p>
+                <span className="latestNews__author">{author}</span>
             </div>
         </div>
     )

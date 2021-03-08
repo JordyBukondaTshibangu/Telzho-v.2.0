@@ -1,0 +1,17 @@
+.app-container {
+    width: 80%;
+    height: 60px;
+    margin-top: 50px;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 30px;
+    color: #fff;
+}
+.app-container:hover {
+    width: 81%;
+    height: 62px;
+    margin-top: 49px;
+    border-radius: 10px;
+    padding-top: 30px;
+    color: #fff;
+}
