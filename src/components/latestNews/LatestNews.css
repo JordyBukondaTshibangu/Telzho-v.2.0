@@ -1,9 +1,10 @@
 .latestNews__container {
     display: flex;
     width: 400px;
-    height: 200px;
+    height: 230px;
     margin: 20px auto;
     border: 1px solid rgb(225, 224, 224);
+    cursor: pointer;
 }
 .latestNews__header {
     width: 550px;
@@ -20,6 +21,20 @@
     font-size: 14px;
     letter-spacing: 1px;
 }
+.latestNews__title a{
+    text-decoration: none;
+    color: #000;
+}
+.latestNews__title a:hover{
+    text-decoration: underline;
+    color: blue;
+}
 .latestNews__description {
+    margin-top: 8px;
     font-size: 10px;
+}
+.latestNews__author {
+    font-weight: 800;
+    font-size: 8px;
+    margin-top: 5px;
 }

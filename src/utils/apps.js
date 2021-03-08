@@ -4,52 +4,62 @@ export const apps = [
     {
         text : 'Youtube',
         background : '#ff0000',
-        logo : ''
+        logo : '',
+        url : 'youtube.com',
     },
     {
         text : 'Twitter',
         background : '#08a0e9',
-        logo : ''
+        logo : '',
+        url : 'twitter.com'
     },
     {
         text : 'Facebook',
         background : '#3b5998',
-        logo : ''
+        logo : '',
+        url : 'facebook.com'
     },
     {
         text : 'Soundcloud',
         background : '#ff7700',
-        logo : ''
+        logo : '',
+        url : 'souncloud.com'
     },
     {
         text : 'LinkedIn',
         background : '#0e76a8',
-        logo : ''
+        logo : '',
+        url : 'linkedin.com'
     },
     {
         text : 'Medium',
         background : '#000000',
-        logo : ''
+        logo : '',
+        url : 'medium.com'
     },
     {
         text : 'DropBox',
         background : '#08a0e9',
-        logo : ''
+        logo : '',
+        url : 'dropbox.com'
     },
     {
         text : 'Netflix',
         background : '#e50914',
-        logo : ''
+        logo : '',
+        url : 'netflix.com'
     },
     {
         text : 'Gmail',
         background : '#eee',
-        logo : ''
+        logo : '',
+        url : 'gmail.com'
     },
     {
         text : 'Instagram',
         background : '#3f729b',
-        logo : ''
+        logo : '',
+        url : 'instagram.com'
     },
 
 ]

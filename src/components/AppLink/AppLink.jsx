@@ -3,13 +3,15 @@ import './AppLink.css';
 
 const AppLink = props => {
 
-    const { text, background, logo } = props.app
+    const { text, background, logo, url  } = props.app
 
-    console.log(background);
+    console.log(url);
     
     return (
         <div className="app-container" style={{backgroundColor : background}}>
-            <h3>{text}</h3>
+            <h3>
+                <a href={url}>{text}</a>
+            </h3>
         </div>
     )
 }

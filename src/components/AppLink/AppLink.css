@@ -6,6 +6,7 @@
     text-align: center;
     padding-top: 30px;
     color: #fff;
+    cursor: pointer;
 }
 .app-container:hover {
     width: 81%;
@@ -13,5 +14,9 @@
     margin-top: 49px;
     border-radius: 10px;
     padding-top: 30px;
+    color: #fff;
+}
+.app-container a {
+    text-decoration: none;
     color: #fff;
 }

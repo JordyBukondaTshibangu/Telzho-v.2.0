@@ -4,7 +4,7 @@ import './LatestNews.css';
 
 const News = ({news}) => {
     
-    const { author, description, title, urlToImage } = news
+    const { author, description, title, urlToImage, url } = news;
 
     return (
         <div className="latestNews__container">
@@ -12,7 +12,7 @@ const News = ({news}) => {
                 <img src={urlToImage} alt="/" />
             </div>
             <div className="latestNews__body">
-                <h3 className="latestNews__title">{title}</h3>
+                <h3 className="latestNews__title"><a href={url}>{title}</a></h3>
                 <p className="latestNews__description">{description}</p>
                 <span className="latestNews__author">{author}</span>
             </div>
