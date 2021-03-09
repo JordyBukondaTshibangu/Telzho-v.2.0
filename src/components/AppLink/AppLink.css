@@ -20,7 +20,20 @@
     text-decoration: none;
     color: #fff;
 }
-
+@media (min-width: 481px) and (max-width: 768px) {
+    .app-container {
+        width: 100px;
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 15px;
+        padding-top: 10px;
+    }
+    .app-container a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 10px;
+    }
+}
 @media (min-width: 320px) and (max-width: 480px) {
     .app-container {
         width: 65px;
@@ -36,5 +49,5 @@
         color: #fff;
         font-size: 10px;
     }
-
 }
+

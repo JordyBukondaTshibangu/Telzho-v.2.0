@@ -45,7 +45,7 @@ export const newsApi =  [
         },
         author: "CNA",
         title: "Chinese beauty app Meitu shares surge after cryptocurrency investment",
-        description: "HONG KONG: Shares of Hong Kong-listed Chinese photo editing app Meitu rose as much as 14.4 per cent on Monday (Mar 8) morning after the company said it had bought US$40 million of cryptocurrencies.\n\nThe beauty-focused technology firm said in a Sunday evening …",
+        description: "HONG KONG: Shares of Hong Kong-listed Chinese per cent on Monday (Mar 8) morning after rencies.\n\nThe beauty-focused technology firm said in a Sunday evening …",
         url: "https://www.channelnewsasia.com/news/business/meitu-cryptocurrency-bitcoin-ethereum-invest-shares-surge-14359208",
         urlToImage: "https://cna-sg-res.cloudinary.com/image/upload/q_auto,f_auto/image/14359206/16x9/991/557/a06170c7a2e079e706ddfedee4fc6ba7/lv/a-logo-of-meitu-is-displayed-at-a-news-conference-in-hong-kong-1.jpg",
         publishedAt: "2021-03-08T03:48:46Z",
