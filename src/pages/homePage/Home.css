@@ -1,7 +1,7 @@
 .home {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     margin: 0 100px;
 }
 .home__header {
@@ -44,6 +44,10 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 70px;
+}
+.home__newsContainer {
+    height: 100%;
+    margin-bottom: 100px;
 }
 
 @media (min-width: 320px) and (max-width: 375px) {
@@ -133,5 +137,6 @@
         align-items: center;
         margin-top: 70px;
         margin-left: 0;
+        margin-bottom: 30px;
     }    
   }
