@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './SearchPage.css';
 import Logo from '../../assets/logo.jpeg'
 import { useStateValue } from '../../StateProvider';
 import useGoogleSearch from '../../customHook/useGoogleSearch';
 import Search from '../../components/search/Search';
-import News from '../../container/recentNews/RecentNews'
+import News from '../../container/recentNews/RecentNews';
+import Loader from '../../components/loader/Loader';
 
 
 
 const SearchPage = props => {
+    const [loading, setLoading ] = useState(false);
     const [{term}, dispatch ] = useStateValue();
     const { data } = useGoogleSearch(term)
 
+    useEffect(() => {
+        data?.items !== undefined ? setLoading(false) : setLoading(true)
+        console.log(loading, "loading");
+        console.log(data?.items, "data")
+    }, [data])
     return (
         <div className="searchPage">
             <div className="searchPage__header">
@@ -33,7 +40,7 @@ const SearchPage = props => {
                 </div> 
                 <div className="search-results">
                 {
-                    true && (
+                    !loading ? (
                         <div className="searchPage__results">
                             <h3>Your search results</h3>
                             <hr></hr>
@@ -70,7 +77,12 @@ const SearchPage = props => {
                                 ))
                             }
                         </div>
-                    )
+                    ) 
+                    : 
+                    <div className="loader-spinner">
+                        <h2>Fetching results...</h2>
+                        <Loader />
+                    </div>
                 }
                 </div> 
             </div>
