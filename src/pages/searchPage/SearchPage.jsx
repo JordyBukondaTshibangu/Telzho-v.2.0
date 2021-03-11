@@ -7,19 +7,28 @@ import useGoogleSearch from '../../customHook/useGoogleSearch';
 import Search from '../../components/search/Search';
 import News from '../../container/recentNews/RecentNews';
 import Loader from '../../components/loader/Loader';
+import NewsCard from '../../modals/newsCard/NewsCard';
 
 
 
 const SearchPage = props => {
     const [loading, setLoading ] = useState(false);
+    const [cardItem, setCardItem ] = useState([]);
+    const [openModal, setOpenModal ] = useState(false);
     const [{term}, dispatch ] = useStateValue();
     const { data } = useGoogleSearch(term)
 
     useEffect(() => {
         data?.items !== undefined ? setLoading(false) : setLoading(true)
-        console.log(loading, "loading");
-        console.log(data?.items, "data")
     }, [data])
+
+    const handleModal = cacheId => { 
+        const card = data?.items.filter(item => item.cacheId === cacheId)
+        const newcard = cardItem.push(card[0])
+        setCardItem(newcard)
+        console.log(cardItem);
+        // setOpenModal(true);
+    }
     return (
         <div className="searchPage">
             <div className="searchPage__header">
@@ -72,6 +81,10 @@ const SearchPage = props => {
                                             <p className="searchPage__resultSnippet">
                                                 {item.snippet}
                                             </p>
+                                            <button onClick={() => handleModal(item.cacheId)}>view more</button>
+                                            {
+                                                openModal && <NewsCard newsItem={cardItem} />
+                                            }
                                         </div>
                                     </div>
                                 ))
