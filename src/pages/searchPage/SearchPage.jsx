@@ -16,7 +16,7 @@ const SearchPage = props => {
     return (
         <div className="searchPage">
             <div className="searchPage__header">
-                <div>
+                <div className="searchPage__logoContainer">
                     <Link  to="/">
                         <img className="searchPage__logo" src={Logo} alt="/"/>
                     </Link>

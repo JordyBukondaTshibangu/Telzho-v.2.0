@@ -132,4 +132,121 @@
     font-weight: 500;
     letter-spacing: 1px;
 }
+@media (min-width: 115px) and (max-width: 480px) {
+    .searchPage {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100vw;
+        padding: 0 20px; 
+    }
+    .searchPage__header {
+        border-bottom: 3px solid #eee;
+        margin-bottom: 0;
+        height: 120px;
+    }
+    .searchPage__logoContainer {
+        display : none;
+    }
+    .searchPage__logo {
+        display: none;
+    }
+    .searchPage__headerBody {
+        width: 100%;
+        height: 120px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .searchPage__headerBody > .search > .search__input {
+        width: 90%;
+        height: 20px;
+        margin: 45px auto;
+    }
+    .searchPage__body {
+        height: 100%;
+        padding-left: 0;
+    }
+    .latest-news {
+        display : none
+    }
+    .searchPage__results {
+        width: 100vw;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .searchPage__resultCount {
+        margin-left: 20px;
+    }
+    .searchPage__results h3{
+        font-size: 28px;
+    }
+    .searchPage__resultTitle {
+        font-size: 12px;
+    }
+    .searchPage__resultSnippet {
+        font-size: 10px;
+    }
+}
 
+@media (min-width: 300px) and (max-width: 330px) {
+    .searchPage__headerBody > .search > .search__input {
+        width: 90%;
+        height: 20px;
+        margin: 45px 4px;
+    }
+}
+@media (min-width: 331px) and (max-width: 375px) {
+    .searchPage__headerBody > .search > .search__input {
+        width: 110%;
+        height: 20px;
+        margin: 45px auto;
+    }
+}
+@media (min-width: 376px) and (max-width: 427px) {
+    .searchPage__headerBody > .search > .search__input {
+        width: 120%;
+        height: 20px;
+        margin: 45px 6px;
+    }
+}
+@media (min-width: 430px) and (max-width: 800px) { 
+    .searchPage__header {
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr;
+        border-bottom: 3px solid #eee;
+        margin-bottom: 0;
+        height: 120px;
+    }
+    .searchPage__logo {
+        object-fit: contain;
+        height: 70px;
+        margin-left: 20px; 
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-right: 0;
+        width: 111%;
+        height: 60px;
+    }
+    .searchPage__headerBody {
+        margin-left: 32px;
+        width: 90%;
+        height: 120px;
+    }
+    .searchPage__headerBody > .search > .search__input {
+        width: 80%;
+        height: 20px;
+        margin: 45px 100px;
+    }
+    .searchPage__results h3{
+        font-size: 22px;
+    }
+    .searchPage__resultTitle {
+        font-size: 12px;
+    }
+    .searchPage__resultSnippet {
+        font-size: 10px;
+    }
+}
