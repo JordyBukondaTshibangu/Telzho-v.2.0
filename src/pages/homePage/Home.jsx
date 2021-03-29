@@ -15,21 +15,26 @@ const Home = () => {
     const [ openMenuModal, setOpenMenuModal ] = useState(false);
 
     const handleUserModal = () => { setOpenUserAccountModal(!openUserAccountModal)};
+    const handleCloseUserModal = () => { setOpenUserAccountModal(false)};
     const handleMenuModal = () => { setOpenMenuModal(!openMenuModal)};
+    const handleCloseMenuModal = () => { setOpenMenuModal(false)};
     
     console.log(openUserAccountModal);
     return (
         <div className="home">
             <div>
                 {
-                    openUserAccountModal && ReactDOM.createPortal(<UserAccount />, document.getElementById('user-account-modal'))
+                    openUserAccountModal && ReactDOM.createPortal(<UserAccount  handleCloseUserModal={() => handleCloseUserModal()}/>, document.getElementById('user-account-modal'))
                 }
                 {
-                    openMenuModal && ReactDOM.createPortal(<Menu />, document.getElementById('menu-modal'))
+                    openMenuModal && ReactDOM.createPortal(<Menu handleCloseMenuModal={() => handleCloseMenuModal()}/>, document.getElementById('menu-modal'))
                 }
             </div>
             <div className="home__header">
-                <Navbar handleUserModal={() => handleUserModal()} handleMenuModal={handleMenuModal}/>
+                <Navbar 
+                    handleUserModal={() => handleUserModal()} 
+                    handleMenuModal={handleMenuModal}
+                    />
             </div>
             <div className="home__body">
                 <img src={Logo} alt="/" />
