@@ -20,7 +20,7 @@ const Home = () => {
     const handleMenuModal = () => { setOpenMenuModal(!openMenuModal)};
     const handleCloseMenuModal = () => { setOpenMenuModal(false)};
     
-    console.log(openUserAccountModal);
+
     return (
         <div className="home">
             <div>
