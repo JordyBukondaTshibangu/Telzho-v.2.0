@@ -2,8 +2,7 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: #eee;
-    padding: 20px;
-    width: 100vw;
+    padding: 25px;
 }
 footer p {
     font-size: 14px;
@@ -23,7 +22,7 @@ footer ul {
     display: flex;
 }
 footer ul li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 footer ul li a {
     text-decoration:  none;
