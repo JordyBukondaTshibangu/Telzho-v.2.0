@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import SearchIcon from '@material-ui/icons/Search';
-import { Button } from '@material-ui/core';
 import MicIcon from '@material-ui/icons/Mic';
 import { useHistory } from 'react-router-dom';
 import './Search.css';

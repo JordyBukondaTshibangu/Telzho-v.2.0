@@ -3,6 +3,7 @@
     flex-direction: column;
     height: 100%;
     margin: 0;
+    width: 100vw;
 }
 .home__header {
     display: flex;
@@ -31,12 +32,13 @@
 .home__body {
     flex: 1;
     display: flex;
-    margin-top: 5%;
+    margin-top: 2%;
     flex-direction: column;
+    background-color: greenyellow;
 }
 .home__body > img {
     object-fit: contain;
-    height: 120px;
+    height: 150px;
 }
 
 .home__body .home__appsContainer {
@@ -44,10 +46,12 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 70px;
+    background-color: grey;
 }
 .home__newsContainer {
-    height: 100%;
+    height: 120%;
     margin-bottom: 100px;
+    background-color: hotpink;
 }
 
 @media (min-width: 320px) and (max-width: 375px) {

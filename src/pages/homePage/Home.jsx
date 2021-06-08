@@ -8,7 +8,6 @@ import News from '../../container/news/News';
 import ExternalApp from '../../container/externalApp/ExternalApp';
 import UserAccount from '../../modals/userAccount/UserAccount';
 import Menu from '../../modals/menu/Menu';
-import Footer from '../../components/footer/Footer';
 
 const Home = () => {
 
@@ -48,9 +47,6 @@ const Home = () => {
                 <div className="home__newsContainer">
                     <News />
                 </div>
-            </div>
-            <div className="home__footer">
-                <Footer />
             </div>
         </div>
     )
