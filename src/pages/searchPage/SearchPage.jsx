@@ -11,14 +11,15 @@ import NewsCard from '../../modals/newsCard/NewsCard';
 
 
 
-const SearchPage = props => {
+const SearchPage = () => {
     const [loading, setLoading ] = useState(false);
+    const [ startIndex, setStartIndex ] = useState(0)
     const [cardItem, setCardItem ] = useState([]);
     const [openModal, setOpenModal ] = useState(false);
     const [{term}, dispatch ] = useStateValue();
-    const { data } = useGoogleSearch(term)
+    const { data } = useGoogleSearch(term, startIndex)
 
-    useEffect(() => {
+    useEffect(() => { 
         data?.items !== undefined ? setLoading(false) : setLoading(true)
     }, [data])
 
@@ -89,6 +90,10 @@ const SearchPage = props => {
                                     </div>
                                 ))
                             }
+                        <div>
+                            <button onClick={() => setStartIndex(startIndex - 10)}>Previous</button>
+                            <button onClick={() => setStartIndex(startIndex + 10)}>Next</button>
+                        </div>
                         </div>
                     ) 
                     : 
@@ -98,6 +103,7 @@ const SearchPage = props => {
                     </div>
                 }
                 </div> 
+                
             </div>
         </div>
     )
