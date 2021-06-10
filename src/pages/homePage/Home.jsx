@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './Home.css';
+import SideBar from '../../container/sidebar/SideBar';
 import Navbar from '../../container/navbar/Navbar';
 import Logo from '../../assets/logo.jpeg';
 import Search from '../../components/search/Search';
@@ -30,7 +31,12 @@ const Home = () => {
                     openMenuModal && ReactDOM.createPortal(<Menu handleCloseMenuModal={() => handleCloseMenuModal()}/>, document.getElementById('menu-modal'))
                 }
             </div>
-            <div className="home__header">
+            <div className="home-container">
+                <div className="home-side-bar">
+                    <SideBar />
+                </div>
+                <div className="home-main-section">
+                    <div className="home__header">
                 <Navbar 
                     handleUserModal={() => handleUserModal()} 
                     handleMenuModal={handleMenuModal}
@@ -46,6 +52,8 @@ const Home = () => {
                 </div>
                 <div className="home__newsContainer">
                     <News />
+                </div>
+            </div>
                 </div>
             </div>
         </div>
