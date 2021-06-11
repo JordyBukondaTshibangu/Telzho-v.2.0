@@ -10,7 +10,6 @@ import Loader from '../../components/loader/Loader';
 import NewsCard from '../../modals/newsCard/NewsCard';
 
 
-
 const SearchPage = () => {
     const [loading, setLoading ] = useState(false);
     const [ startIndex, setStartIndex ] = useState(0)
@@ -27,8 +26,6 @@ const SearchPage = () => {
         const card = data?.items.filter(item => item.cacheId === cacheId)
         const newcard = cardItem.push(card[0])
         setCardItem(newcard)
-        console.log(cardItem);
-        // setOpenModal(true);
     }
     return (
         <div className="searchPage">
@@ -39,7 +36,7 @@ const SearchPage = () => {
                     </Link>
                 </div>
                 <div className="searchPage__headerBody">
-                    <Search hideButton />
+                    <Search hideButton term={term}/>
                 </div>
             </div>
             <div className="searchPage__body">
