@@ -87,9 +87,17 @@ const SearchPage = () => {
                                     </div>
                                 ))
                             }
-                        <div>
-                            <button onClick={() => setStartIndex(startIndex - 10)}>Previous</button>
-                            <button onClick={() => setStartIndex(startIndex + 10)}>Next</button>
+                        <div className="pagination-section">
+                            <div 
+                                onClick={() => setStartIndex(startIndex - 10)} 
+                                className="paginate-btn"
+                                > Previous
+                            </div>
+                            <div 
+                                onClick={() => setStartIndex(startIndex + 10)} 
+                                className="paginate-btn"
+                                >Next
+                            </div>
                         </div>
                         </div>
                     ) 
