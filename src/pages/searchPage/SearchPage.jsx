@@ -10,15 +10,15 @@ import Loader from '../../components/loader/Loader';
 import NewsCard from '../../modals/newsCard/NewsCard';
 
 
-
-const SearchPage = props => {
+const SearchPage = () => {
     const [loading, setLoading ] = useState(false);
+    const [ startIndex, setStartIndex ] = useState(0)
     const [cardItem, setCardItem ] = useState([]);
     const [openModal, setOpenModal ] = useState(false);
     const [{term}, dispatch ] = useStateValue();
-    const { data } = useGoogleSearch(term)
+    const { data } = useGoogleSearch(term, startIndex)
 
-    useEffect(() => {
+    useEffect(() => { 
         data?.items !== undefined ? setLoading(false) : setLoading(true)
     }, [data])
 
@@ -26,8 +26,6 @@ const SearchPage = props => {
         const card = data?.items.filter(item => item.cacheId === cacheId)
         const newcard = cardItem.push(card[0])
         setCardItem(newcard)
-        console.log(cardItem);
-        // setOpenModal(true);
     }
     return (
         <div className="searchPage">
@@ -38,7 +36,7 @@ const SearchPage = props => {
                     </Link>
                 </div>
                 <div className="searchPage__headerBody">
-                    <Search hideButton />
+                    <Search hideButton term={term}/>
                 </div>
             </div>
             <div className="searchPage__body">
@@ -89,6 +87,18 @@ const SearchPage = props => {
                                     </div>
                                 ))
                             }
+                        <div className="pagination-section">
+                            <div 
+                                onClick={() => setStartIndex(startIndex - 10)} 
+                                className="paginate-btn"
+                                > Previous
+                            </div>
+                            <div 
+                                onClick={() => setStartIndex(startIndex + 10)} 
+                                className="paginate-btn"
+                                >Next
+                            </div>
+                        </div>
                         </div>
                     ) 
                     : 
@@ -98,6 +108,7 @@ const SearchPage = props => {
                     </div>
                 }
                 </div> 
+                
             </div>
         </div>
     )

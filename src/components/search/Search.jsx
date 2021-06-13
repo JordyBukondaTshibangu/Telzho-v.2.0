@@ -7,11 +7,12 @@ import { useStateValue } from '../../StateProvider';
 import { actionTypes } from '../../reducer';
 
 
-const Search = ({hideButton = false }) => {
+const Search = props => {
     
-
+    const term = props?.term
+    
     const history = useHistory()
-    const [ input, setInput ] = useState("");
+    const [ input, setInput ] = useState(term);
     const [ {}, dispatch ] = useStateValue();
 
     const search = event => {
@@ -21,7 +22,7 @@ const Search = ({hideButton = false }) => {
             term : input
         })
 
-        history.push('/search')
+        history.push(`/search?term=${input}`)
     }
 
     return (
