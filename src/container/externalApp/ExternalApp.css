@@ -1,9 +1,30 @@
+
 .external-app-container {
+    padding: 10px 50px;
+    margin: 0 auto;
+    width: 60vw;
+    text-align: center;
+
+}
+.external-app-link {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    padding: 20px 50px;
-    margin: 20px auto;
-    width: 80vw;
+    padding: 10px 50px;
+    margin: 0 auto;
+    width: 60vw;
+}
+.show-more-btn {
+    width : 130px;
+    height : 30px;
+    border : solid 1px black;
+    background : #fff;
+    color : #000;
+    cursor : pointer;
+    font-size : 12px;
+    font-weight : 800;
+}
+.show-more-btn:hover {
+    border : solid 1px black;
 }
 @media (min-width: 320px) and (max-width: 375px) {
     .external-app-container {

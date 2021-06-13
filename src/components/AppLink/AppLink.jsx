@@ -3,7 +3,7 @@ import './AppLink.css';
 
 const AppLink = props => {
 
-    const { text, background, logo, url  } = props.app
+    const { text, background, url  } = props.app
 
     
     return (
