@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SearchIcon from '@material-ui/icons/Search';
+import CloseIcon from '@material-ui/icons/Close';
 import MicIcon from '@material-ui/icons/Mic';
 import { useHistory } from 'react-router-dom';
 import './Search.css';
@@ -14,6 +15,7 @@ const Search = props => {
     const history = useHistory()
     const [ input, setInput ] = useState(term);
     const [ {}, dispatch ] = useStateValue();
+    const [ showCancel, setCancel ] = useState( false );
 
     const search = event => {
         event.preventDefault();
@@ -25,12 +27,42 @@ const Search = props => {
         history.push(`/search?term=${input}`)
     }
 
+    const Delete = event => {
+        setInput("");
+
+        if ( input == "" && showCancel ) {
+            setCancel( !showCancel );
+        }
+        // else if ( input != "" && sho ) {
+        //     setCancel( !showCancel );
+        // }
+    }
+
+    const searchText = e =>{
+        setInput(e.target.value);
+
+        if ( input == "" && showCancel ) {
+            setCancel( !showCancel );
+        }
+        else if ( input != "" && !showCancel ) {
+            setCancel( !showCancel );
+        }
+        
+    }
+
     return (
         <form className="search" onSubmit={search}>
             <div className="search__input">
-                <SearchIcon className="search__inputIcon" />
-                <input type="text" value={input} onChange={ e => setInput(e.target.value)}/>
-                <MicIcon />
+
+                <SearchIcon onClick={search} className="search__inputIcon" />
+                {/* <input type="submit" value="Go" /> */}
+                <input className="search__text" type="text" value={input} onChange={ searchText }/>
+                {/* <input className="search__cancel" type="reset" value="Cancel" /> */}
+                {
+                    showCancel && <CloseIcon onClick={Delete} className="search__cancel" />
+                }
+                
+                {/* <MicIcon /> */}
             </div>
         </form>
     )

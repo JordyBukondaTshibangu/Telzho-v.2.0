@@ -5,9 +5,9 @@ import Logo from '../../assets/logo.jpeg'
 import { useStateValue } from '../../StateProvider';
 import useGoogleSearch from '../../customHook/useGoogleSearch';
 import Search from '../../components/search/Search';
-import News from '../../container/recentNews/RecentNews';
-import Loader from '../../components/loader/Loader';
+// import News from '../../container/recentNews/RecentNews';
 import NewsCard from '../../modals/newsCard/NewsCard';
+import NewsAPI from "../../components/news/news";
 
 
 const SearchPage = () => {
@@ -29,22 +29,28 @@ const SearchPage = () => {
     }
     return (
         <div className="searchPage">
+
             <div className="searchPage__header">
+
                 <div className="searchPage__logoContainer">
                     <Link  to="/">
                         <img className="searchPage__logo" src={Logo} alt="/"/>
                     </Link>
                 </div>
+
                 <div className="searchPage__headerBody">
                     <Search hideButton term={term}/>
                 </div>
             </div>
+
+
+
+
             <div className="searchPage__body">
                 <div className="latest-news">
-                    <h3 className="latest-news-heading">Latest news</h3>
-                    <hr></hr>
-                    <News />
+                    <NewsAPI query={ term } />
                 </div> 
+
                 <div className="search-results">
                 {
                     !loading ? (
@@ -56,13 +62,13 @@ const SearchPage = () => {
                             </p>
                             {
                                 data?.items.map((item, index) => (
-                                    <div className="searchPage__result" key={index}>
+                                    <div className="searchPage__result searchPageResultShadow" key={index}>
+
                                         <div className="image-container">
                                             <a href={item.link} className="result-site">
                                                 {  
                                                     item.pagemap?.cse_image?.length > 0 && 
-                                                    item.pagemap?.cse_image[0]?.src 
-                                                    && 
+                                                    item.pagemap?.cse_image[0]?.src && 
                                                     (
                                                         <img className="searchPage__resultImage"src={
                                                             item.pagemap?.cse_image[0]?.src
@@ -71,40 +77,45 @@ const SearchPage = () => {
                                                 }
                                                 <span>{ item.displayLink}</span>
                                             </a>
+
+                                            <a href={item.link} className="searchPage__resultTitle">
+                                                <h2>{item.title}</h2>
+                                            </a>
                                         </div>
+
                                         <div className="text-container">
                                             <a href={item.link} className="searchPage__resultTitle">
                                                 <h2>{item.title}</h2>
                                             </a>
-                                            <p className="searchPage__resultSnippet">
-                                                {item.snippet}
-                                            </p>
-                                            <button onClick={() => handleModal(item.cacheId)}>view more</button>
-                                            {
+                                            <p className="searchPage__resultSnippet">{item.snippet}</p>
+                                            {/* <button onClick={() => handleModal(item.cacheId)}>view more</button> */}
+                                            {/* {
                                                 openModal && <NewsCard newsItem={cardItem} />
-                                            }
+                                            } */}
                                         </div>
+
                                     </div>
                                 ))
                             }
-                        <div className="pagination-section">
-                            <div 
-                                onClick={() => setStartIndex(startIndex - 10)} 
-                                className="paginate-btn"
-                                > Previous
+
+                            <div className="pagination-section">
+                                <div 
+                                    onClick={() => setStartIndex(startIndex - 10)} 
+                                    className="paginate-btn"
+                                    > Previous
+                                </div>
+                                <div 
+                                    onClick={() => setStartIndex(startIndex + 10)} 
+                                    className="paginate-btn"
+                                    >Next
+                                </div>
                             </div>
-                            <div 
-                                onClick={() => setStartIndex(startIndex + 10)} 
-                                className="paginate-btn"
-                                >Next
-                            </div>
-                        </div>
+
                         </div>
                     ) 
                     : 
-                    <div className="loader-spinner">
-                        <h2>Fetching results...</h2>
-                        <Loader />
+                    <div>
+                      
                     </div>
                 }
                 </div> 

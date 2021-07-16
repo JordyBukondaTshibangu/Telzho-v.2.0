@@ -1,68 +1,71 @@
 export const newsApi =  [
     {
         source: {
-            id: null,
-            name: "CNBC"
+            "id": null,
+            "name": "Defense One"
         },
-        author: "Tyler Clifford",
-        title: "Cramer's week ahead: Build a cash position for the next stock sell-off - CNBC",
-        description: "\"Mad Money\" host Jim Cramer gave his reaction to the February jobs report and Friday's market activity, telling investors to expect more declines on the market.",
-        url: "https://www.cnbc.com/2021/03/05/cramers-week-ahead-build-a-cash-position-for-the-next-stock-sell-off.html",
-        urlToImage: "https://image.cnbcfm.com/api/v1/image/106551960-1590499260160gettyimages-1227099154.jpeg?v=1614733724",
-        publishedAt: "2021-03-06T00:14:00Z",
-        content: "CNBC's Jim Cramer said the jobs report from the Labor Department Friday satisfied markets, at least for the interim.\r\nThe U.S. economy added 379,000 jobs last month and the unemployment rate inched d… [+5030 chars]"
+        "author": "Thomas Corbett, Peter W. Singer",
+        "title": "China's Fusion Research Is Heating Up - Defense One",
+        "description": "The EAST reactor in Hefei broke records last month as it edges toward the sustained stellar temperatures needed to generate fusion energy.",
+        "url": "https://www.defenseone.com/ideas/2021/06/chinas-fusion-research-heating/174990/",
+        "urlToImage": "https://cdn.defenseone.com/media/img/cd/2021/06/28/EAST_plasma_geometry_and_3D_view.webp-2/open-graph.png",
+        "publishedAt": "2021-06-28T13:45:17Z",
+        "content": "The hottest thing in the solar system is usually the Sun, with its core temperature of 15 million degrees Celsius. But for nearly two minutes on May 28, the title was held by an experimental fusion r… [+4622 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Digital Trends"
+        },
+        "author": "Monica J. White",
+        "title": "New leak suggests that AMD is about to release two new graphics cards",
+        "description": "According to a leak, AMD is about to release two new graphics cards. AMD Radeon RX 6600 and RX 6600XT both house a Navi 23 GPU and may hit the market soon.",
+        "url": "https://www.digitaltrends.com/computing/new-amd-radeon-graphics-cards-launching-soon/",
+        "urlToImage": "https://icdn.digitaltrends.com/image/digitaltrends/amd-radeon-rx-6000-series-graphics-card_big-navi-scaled-2.jpg",
+        "publishedAt": "2021-06-28T17:19:32Z",
+        "content": "AMD may be about to launch two new Navi 23 graphics cards, according to a new leak. Drivers for the RX 6600 and RX 6600XT have been found in a recent update, suggesting that AMD is likely preparing t… [+2603 chars]"
+    
     },
     {
         source: {
-            id: "al-jazeera-english",
-            name: "Al Jazeera English"
+            "id": "the-wall-street-journal",
+            "name": "The Wall Street Journal"
         },
-        author: "Al Jazeera",
-        title: "737 MAX declared emergency after engine stall, safely lands - Al Jazeera English",
-        description: "American Airlines flight with 95 passengers and 6 crew lands safely; 737 MAX planes have faced scrutiny for years.",
-        url: "https://www.aljazeera.com/news/2021/3/5/aa-737-max-declared-emergency-after-engine-stall-safely-lands",
-        urlToImage: "https://www.aljazeera.com/wp-content/uploads/2021/03/2021-03-03T170729Z_1736746908_RC2T3M9J844G_RTRMADP_3_HEALTH-CORONAVIRUS-AMERICAN-AIRLINE.jpg?resize=1200%2C630",
-        publishedAt: "2021-03-05T22:41:15Z",
-        content: "American Airlines Co said on Friday that a Boeing 737 MAX bound for New Jerseys Newark Liberty International Airport declared an emergency after the captain shut down one engine due to a possible mec… [+1607 chars]"
+        "author": "Eric Morath, Joe Barrett",
+        "title": "Americans Leaving Unemployment Rolls More Quickly in States Cutting Off Benefits...",
+        "description": "Americans Leaving Unemployment Rolls More Quickly in States Cutting Off Benefits...\r\n\n \n \n \n (Second column, 15th story, link)\r\n\n \r\n\n \r\n\n \n Related stories:ROARING 20S: Vegas Home Sells for Record $25 Million...\r\nIPO Market Never Been Hotter...\r\nHaters Everyw…",
+        "url": "https://www.wsj.com/articles/americans-are-leaving-unemployment-rolls-more-quickly-in-states-cutting-off-benefits-11624786202",
+        "urlToImage": "https://images.wsj.net/im-360633/social",
+        "publishedAt": "2021-06-27T12:22:37Z",
+        "content": "The number of unemployment-benefit recipients is falling at a faster rate in Missouri and 21 others states canceling enhanced and extended payments this month, suggesting that ending the aid could pu… [+6872 chars]"
+    
     },
     {
         source: {
-            id: "financial-times",
-            name: "Financial Times"
+            "id": "the-wall-street-journal",
+            "name": "The Wall Street Journal"
         },
-        author: null,
-        title: "High-priced tech stocks sink further into bear market territory - Financial Times",
-        description: "Tesla and other companies backed by Ark Investments’ Cathie Wood have tumbled",
-        url: "https://www.ft.com/content/7019579f-ee05-4b20-af40-b1195583dc69",
-        urlToImage: "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fe2481f14-1919-4de9-9167-6ad113a018c9.jpg?source=next-opengraph&fit=scale-down&width=900",
-        publishedAt: "2021-03-05T22:28:11Z",
-        content: "Some of the hottest technology stocks and funds of recent months have fallen into bear market territory and investors are betting on more turmoil to come, as rising bond yields undermine the case for… [+4317 chars]"
+        "author": "chetan",
+        "title": "Natural-Pool Owners Are Kissing Chlorine and Other Chemicals Goodbye - WSJ",
+        "description": "Intense demand during Covid and a shortage of chlorine tabs have homeowners hopping from chemical-treated pools to greener alternatives",
+        "url": "https://www.wsj.com/articles/natural-pools-green-alternative-chlorine-11624472961",
+        "urlToImage": "https://images.wsj.net/im-356344/social",
+        "publishedAt": "2021-06-28T05:47:02Z",
+        "content": "This summer, some homeowners will be swimming in their backyard pools au naturel. The iconic, aqua-blue vessels of chlorine-treated water are starting to see competition from the leafy, greenish wate… [+1203 chars]"
     },
     {
-        source: {
-        id: null,
-        name: "CNA"
+        "source": {
+            "id": null,
+            "name": "Jalopnik"
         },
-        author: "CNA",
-        title: "Chinese beauty app Meitu shares surge after cryptocurrency investment",
-        description: "HONG KONG: Shares of Hong Kong-listed Chinese per cent on Monday (Mar 8) morning after rencies.\n\nThe beauty-focused technology firm said in a Sunday evening …",
-        url: "https://www.channelnewsasia.com/news/business/meitu-cryptocurrency-bitcoin-ethereum-invest-shares-surge-14359208",
-        urlToImage: "https://cna-sg-res.cloudinary.com/image/upload/q_auto,f_auto/image/14359206/16x9/991/557/a06170c7a2e079e706ddfedee4fc6ba7/lv/a-logo-of-meitu-is-displayed-at-a-news-conference-in-hong-kong-1.jpg",
-        publishedAt: "2021-03-08T03:48:46Z",
-        content: "HONG KONG: Shares of Hong Kong-listed Chinese photo editing app Meitu rose as much as 14.4 per cent on Monday (Mar 8) morning after the company said it had bought US$40 million of cryptocurrencies.\r\n… [+1111 chars]"
+        "author": "Mercedes Streeter",
+        "title": "The Aston Martin Valkyrie AMR Pro Ditches Hybrid As It Gets Freed From Le Mans Car Red Tape - Jalopnik",
+        "description": "This track-only non-hybrid is what you get when a manufacturer builds a car without any rules.",
+        "url": "https://jalopnik.com/the-aston-martin-valkyrie-amr-pro-ditches-hybrid-as-it-1847185082",
+        "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/9010a0430c1948b1e550578ddc4b348b.jpg",
+        "publishedAt": "2021-06-28T15:16:00Z",
+        "content": "Aston Martins bid to compete in the Le Mans Hypercar class may have been shelved, but its plan to build an extreme track weapon is not. Unburdened from road and Le Mans rules, the updated Aston Marti… [+2283 chars]"
+    
     },
-    {
-        source: {
-        id: null,
-        name: "CleanTechnica"
-        },
-        author: "Johnna Crider",
-        title: "Tesla Is Partnering Up With New Caledonia For Nickel",
-        description: "Tesla is partnering with the New Caledonia nickel mine as a technical advisor as a way to secure stocks of nickel, Mining Global has reported. The deal was signed in the French Pacific territory and noted that the partnership is a “technical and industrial pa…",
-        url: "https://cleantechnica.com/2021/03/07/tesla-is-partnering-up-with-new-caledonia-for-nickel/",
-        urlToImage: "https://cleantechnica.com/files/2021/03/New-Caledonia-e1615172698943.png",
-        publishedAt: "2021-03-08T03:05:28Z",
-        content: "Tesla is partnering with the New Caledonia nickel mine as a technical advisor as a way to secure stocks of nickel, Mining Global has reported. The deal was signed in the French Pacific territory and … [+2051 chars]"
-        }
 
 ]
