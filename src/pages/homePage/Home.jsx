@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
 import Search from '../../components/search/Search';
 import ExternalApp from '../../container/externalApp/ExternalApp';
+import SideBar from '../../components/sidebar/SideBar'
 import {FaCog} from "react-icons/fa";
 import './Home.css';
 
 
 const Home = () => {
     const [darkMode, setDarkMode] = useState(false);
+    const [ openModal, setOpenModal ] = useState(true)
 
     return (
         <div className={
@@ -15,7 +18,10 @@ const Home = () => {
             <div className="container">
                 <div className="home-header">
                     <div className="setting-icon">
-                        <FaCog className="gear-setting"/>
+                        <FaCog className="gear-setting" onClick={() => setOpenModal(!openModal)}/>
+                        {
+                             openModal && ReactDOM.createPortal( <SideBar closeModal = { () => setOpenModal(false) }/>, document.getElementById('app-setting'))
+                        }
                     </div>
                     <div className="setting-mode">
                         <span style={{color: darkMode ? "grey" : "yellow" }}>☀︎</span>

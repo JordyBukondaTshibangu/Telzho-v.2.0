@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { apps } from '../../utils/apps';
-import './AddSite.css'
+import { apps } from '../../utils/myApps';
+import './NewAppModal.css'
 
-const AddSiteModal = ({handleCloseNewAppModal}) => {
+const NewAppModal = ({handleCloseNewAppModal}) => {
     const [ appName, setAppName ] = useState("")
     const [ link, setLink ] = useState("")
 
@@ -16,6 +16,7 @@ const AddSiteModal = ({handleCloseNewAppModal}) => {
         appList.push(newApp)
         setAppName("")
         setLink("")
+        console.log(appList)
     }
     return (
         <div className="overlay">
@@ -36,4 +37,4 @@ const AddSiteModal = ({handleCloseNewAppModal}) => {
     )
 }
 
-export default AddSiteModal
+export default NewAppModal

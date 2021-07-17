@@ -6,8 +6,8 @@ import './ExternalApp.css'
 
 const ExternalApp = () => {
 
-    const [showApps, setShowApp] = useState(true);
-    const [addApps, setAddApp] = useState(true);
+    const [showApps, setShowApp] = useState(false);
+    const [showModal, setAddApp] = useState(false);
 
     return (
             <div className="moreExternalApps">
@@ -18,7 +18,7 @@ const ExternalApp = () => {
                         onClick={
                             () => {
                                 setShowApp(!showApps);
-                                setAddApp(addApps)
+                                setAddApp(showModal)
                             }
                         }>
                             Show more apps
@@ -27,7 +27,7 @@ const ExternalApp = () => {
                         className="add-site-btn"
                         onClick={
                             () => {
-                                setAddApp(!addApps);
+                                setAddApp(!showModal);
                                 setShowApp(showApps)
                             }
                         }>
@@ -35,7 +35,7 @@ const ExternalApp = () => {
                     </button>
                 </div>
 
-                { addApps && <AddSite />}
+                { showModal && <AddSite handleCloseNewAppModal={() => setAddApp(false)}/>}
 
                 {
                     showApps && 

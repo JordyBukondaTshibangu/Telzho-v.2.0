@@ -43,6 +43,7 @@
     height: 35px;
     width: 35px;
     color: #ccc;
+    cursor: pointer;
   }
 
 .setting-mode {
