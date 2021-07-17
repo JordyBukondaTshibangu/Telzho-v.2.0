@@ -15,13 +15,13 @@ export const apps = [
         url : 'https://za.linkedin.com/'
     },
     {
-        text : 'pinterest',
+        text : 'Pinterest',
         background : '#08a0e9',
         logo : 'https://i.pinimg.com/originals/1b/76/01/1b7601e035a83c13c208b4ec905ee6d9.png',
         url : 'https://za.pinterest.com/'
     },
     {
-        text : 'netflix',
+        text : 'Netflix',
         background : '#0e76a8',
         logo : 'https://i.redd.it/gj1t3nckxyx61.png',
         url : 'https://www.netflix.com/za/'

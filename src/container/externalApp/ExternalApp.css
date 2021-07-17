@@ -1,151 +1,72 @@
 
-.external-app-container {
-    /* padding: 10px 50px; */
-    margin: 0em auto;
+.button-container  {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
     width: 60vw;
-    /* text-align: center; */
-
-}
-.external-app-link {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    margin: 0 auto;
-    /* background-color: yellow; */
-    width: 60%;
-}
-.btns > button {
-    display: inline;
-    margin: 1em;
-}
-
-.addAppForm {
-    width: 100%;
-    /* background-color: yellow; */
-    /* position: absolute; */
-    /* opacity: .5; */
+    height: 30px;
+    margin-top: 70px;
     text-align: center;
-    padding: .5em;
-    box-shadow: 0em 0em .2em;
-    background-color: rgb(219, 140, 37);
 }
 
-.addAppForm div input[type="text"] {
-    padding: .4em;
+.button-container .show-more-btn {
+    background-color: #ccc;
+    border-radius: 0;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-weight: 800;
 }
-
-.addAppForm div {
-    margin: 1em;
-}
-
-.addAppForm .addAppForm {
-    width: 100%;
-    background-color: rgb(219, 140, 37);
-    position: relative;
-    margin: 1em auto;
-    opacity: 1;
-}
-
-
-.show-more-btn, .add-more-apps, .addAppForm input[type="submit"]  {
-    /* border : solid 1px rgb(0, 0, 0); */
-    border: 0em;
-    background: rgb(71, 151, 160);
-    color : rgb( 255, 255, 255);
-    cursor : pointer;
-    font-size : 12px;
-    padding: .5em;
-    margin: 2em;
-    margin: 0em auto;
-    font-weight : 800;
-    border-radius: .5em;
-}
-.show-more-btn:hover, .add-more-apps:hover {
-    /* border: solid 1px black; */
-    border: 0em;
-    background: rgb(223, 103, 6);
+.button-container .add-site-btn {
+    background-color: #ccc;
+    border-radius: 0;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-weight: 800;
 }
 
 .more-apps {
     display: grid;
-    /* width: 95%; */
     justify-content: space-between;
-    /* background-color: yellow; */
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin: 0em auto;
-    /* background-color: yellow; */
-    width: 60%;
+    width: 80%;
 }
 
-/* .more-apps > .app-container {
-    margin-left: 1em;
-} */
-
-@media (min-width: 320px) and (max-width: 480px) {
-    .external-app-container {
-        width: 95%;
-    }
-
-    .external-app-link, .more-apps {
-        /* background-color:yellow; */
-        width: 100%;
+ @media (min-width: 320px) and (max-width: 480px) {
+    .button-container  {
         display: flex;
         justify-content: space-between;
+        margin: 20px auto;
+        width: 60vw;
+        height: 30px;
+        margin-top: 70px;
+        text-align: center;
     }
-
-    .moreExternalApps {
-        width: 100%;
-        margin: 1em auto;
-        display: flex;
+    
+    .button-container .show-more-btn {
+        font-size: 10px;
+        font-weight: 500;
+        margin-right: 10px;
+    }
+    .button-container .add-site-btn {
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .more-apps {
+        display: grid;
+        grid-template-columns: 1fr;
         align-items: center;
-        flex-direction: column;
     }
 }
-
-
-@media (min-width: 481px) and (max-width: 768px) {
-     .external-app-container {
-        width: 95%;
-        /* background-color: black; */
+@media (min-width: 320px) and (max-width: 375px) {
+    .more-apps {
+        padding-left: 80px;
     }
-
-    .external-app-link {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .moreExternalApps {
-        width: 100%;
-        margin: 1em auto;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    /* .more-apps > .app-container {
-        margin-left: 1em;
-    } */
 }
-
-@media (min-width: 769px) {
-    .external-app-container {
-       width: 60%;
-       /* background-color: black; */
-   }
-
-   .external-app-link {
-       display: flex;
-       justify-content: space-between;
-   }
-
-   .moreExternalApps {
-       width: 100%;
-       margin: 1em auto;
-       display: flex;
-       align-items: center;
-       flex-direction: column;
-   }
-
-   /* .more-apps > .app-container {
-       margin-left: 1em;
-   } */
+@media (min-width: 375px) and (max-width: 425px) {
+    .more-apps {
+        padding-left: 120px;
+    }
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import SearchIcon from '@material-ui/icons/Search';
 import CloseIcon from '@material-ui/icons/Close';
-import MicIcon from '@material-ui/icons/Mic';
+import { FaSearch } from "react-icons/fa"
 import { useHistory } from 'react-router-dom';
 import './Search.css';
 import { useStateValue } from '../../StateProvider';
@@ -23,46 +22,33 @@ const Search = props => {
             type : actionTypes.SET_SEARCH_TERM,
             term : input
         })
-
         history.push(`/search?term=${input}`)
-    }
-
-    const Delete = event => {
-        setInput("");
-
-        if ( input == "" && showCancel ) {
-            setCancel( !showCancel );
-        }
-        // else if ( input != "" && sho ) {
-        //     setCancel( !showCancel );
-        // }
-    }
-
-    const searchText = e =>{
-        setInput(e.target.value);
-
-        if ( input == "" && showCancel ) {
-            setCancel( !showCancel );
-        }
-        else if ( input != "" && !showCancel ) {
-            setCancel( !showCancel );
-        }
-        
     }
 
     return (
         <form className="search" onSubmit={search}>
-            <div className="search__input">
-
-                <SearchIcon onClick={search} className="search__inputIcon" />
-                {/* <input type="submit" value="Go" /> */}
-                <input className="search__text" type="text" value={input} onChange={ searchText }/>
-                {/* <input className="search__cancel" type="reset" value="Cancel" /> */}
+            <div className="search-input">
+                <FaSearch onClick={search} className="search-inputIcon" />
+                <input 
+                    className="search-text" 
+                    type="text" value={input} 
+                    onChange={ e => {
+                        setInput(e.target.value)
+                        !input ? setCancel(false) : setCancel(true)
+                    }}
+                />
                 {
-                    showCancel && <CloseIcon onClick={Delete} className="search__cancel" />
+                    showCancel 
+                    && 
+                    <CloseIcon 
+                        className="search-cancel" 
+                        onClick={() => {
+                            !input ? setCancel(false) : setCancel(true)
+                            setInput("")
+                            setCancel(false)
+                        }}  
+                    />
                 }
-                
-                {/* <MicIcon /> */}
             </div>
         </form>
     )
