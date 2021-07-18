@@ -6,7 +6,6 @@ import { useStateValue } from '../../StateProvider';
 import useGoogleSearch from '../../customHook/useGoogleSearch';
 import Search from '../../components/search/Search';
 // import News from '../../container/recentNews/RecentNews';
-import NewsCard from '../../modals/newsCard/NewsCard';
 import NewsAPI from "../../components/news/news";
 
 
@@ -14,7 +13,6 @@ const SearchPage = () => {
     const [loading, setLoading ] = useState(false);
     const [ startIndex, setStartIndex ] = useState(0)
     const [cardItem, setCardItem ] = useState([]);
-    const [openModal, setOpenModal ] = useState(false);
     const [{term}, dispatch ] = useStateValue();
     const { data } = useGoogleSearch(term, startIndex)
 
@@ -88,10 +86,6 @@ const SearchPage = () => {
                                                 <h2>{item.title}</h2>
                                             </a>
                                             <p className="searchPage__resultSnippet">{item.snippet}</p>
-                                            {/* <button onClick={() => handleModal(item.cacheId)}>view more</button> */}
-                                            {/* {
-                                                openModal && <NewsCard newsItem={cardItem} />
-                                            } */}
                                         </div>
 
                                     </div>

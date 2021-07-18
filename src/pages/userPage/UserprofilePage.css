@@ -9,10 +9,6 @@
     box-shadow: .1em .1em .5em rgb(191, 191, 191);
 }
 
-.p-name {
-    float: left;
-}
-
 .usr-main>.profile-details {
     float: right;
     width: 45%;
@@ -69,11 +65,9 @@
 
 @media screen and ( max-width: 30em) {
     .usr-main>.edit-profile {
-        /* background-color: black; */
         font-size: 1em;
     }
     .usr-main>.profile-details {
-        /* background-color: black; */
         font-size: 1em
     }
     .usr-main>.edit-profile,

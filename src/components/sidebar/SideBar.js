@@ -11,7 +11,10 @@ const SideBar = ({ closeModal }) => {
 						<Link className='link' to='/'> General</Link>
 					</li>
 					<li className='menu-item'>
-            <Link className='link' to='/user-profile'> User Profile</Link>
+            			<Link className='link' to='/user-profile'> User Profile</Link>
+					</li>
+					<li className='menu-item'>
+            			<Link className='link' to='/dashboard'> Dashboard</Link>
 					</li>
 					<li className='menu-item'>
 						<Link className='link' to='/privacy'>Privacy &amp; Security</Link>

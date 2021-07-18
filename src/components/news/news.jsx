@@ -44,8 +44,11 @@ const NewsAPI = ( props ) => {
                     {
                         news.map(item => ( 
                             <li key = { item.datePublished } >
-                                <img src = { item.image === undefined ? "" : item.image.thumbnail.contentUrl }
-                                height = "auto" / > { item.name } 
+                                <img 
+                                    src = { item.image === undefined ? "" : item.image.thumbnail.contentUrl }
+                                    height = "auto" 
+                                    alt="/"/ > 
+                                    { item.name } 
                             </li>
                         ))
                     } 

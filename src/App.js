@@ -6,8 +6,10 @@ import Home from './pages/homePage/Home'
 import SearchPage from './pages/searchPage/SearchPage'
 import UserPage from './pages/userPage/UserprofilePage'
 import PrivacyPage from './pages/privacyPage/PrivacyPage'
+import DashboardPage from './pages/dashboard/Dashboard'
 import SideBar from './components/sidebar/SideBar'
 import SwitchModeRouter from './SwitchModeRouter'
+
 
 const App = () => {
 	const [darkMode, setDarkMode] = useState(false)
@@ -48,7 +50,8 @@ const App = () => {
 						<SwitchModeRouter path='/' exact darkMode={darkMode} component={Home} />
 						<SwitchModeRouter path='/search' exact darkMode={darkMode} component={SearchPage} />
 						<SwitchModeRouter path='/user-profile' exact darkMode={darkMode} component={UserPage} />
-						<SwitchModeRouter path='/privacy' exact darkMode={darkMode} component={UserPage} />
+						<SwitchModeRouter path='/privacy' exact darkMode={darkMode} component={PrivacyPage} />
+						<SwitchModeRouter path='/dashboard' exact darkMode={darkMode} component={DashboardPage} />
 					</div>
 				</div>
 			</Switch>

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import CloseIcon from '@material-ui/icons/Close';
 import { FaSearch } from "react-icons/fa"
 import { useHistory } from 'react-router-dom';
-import './Search.css';
 import { useStateValue } from '../../StateProvider';
 import { actionTypes } from '../../reducer';
+import './Search.css';
 
 
 const Search = props => {
