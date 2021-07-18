@@ -1,28 +1,28 @@
-.news_container {
+.news-container {
     font-size: .8em;
+    background-color: #fff;
+    width:18vw;
+    padding: 10px;
 }
 
-.news_container>.result_news {
-    background-color: blue;
+.news-container>.result-news {
     padding: 0em;
     margin: 0em;
     text-align: left;
 }
 
-.result_news img {
+.result-news img {
     width: 5em;
     height: auto;
-    /* float: left; */
 }
 
-.result_news li {
+.result-news li {
     list-style: none;
     margin: 0em 0em 1em 0em;
     background-color: yellow;
-    /* float: left; */
 }
 
-.result_news>ul {
+.result-news>ul {
     background-color: white;
     margin: 0em;
     padding: 0em;

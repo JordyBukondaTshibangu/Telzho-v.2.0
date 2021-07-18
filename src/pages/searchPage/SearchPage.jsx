@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './SearchPage.css';
 import Logo from '../../assets/logo.jpeg'
 import { useStateValue } from '../../StateProvider';
 import useGoogleSearch from '../../customHook/useGoogleSearch';
 import Search from '../../components/search/Search';
-// import News from '../../container/recentNews/RecentNews';
 import NewsAPI from "../../components/news/news";
+import './SearchPage.css';
 
-
-const SearchPage = () => {
+const SearchPage = ({darkMode}) => {
     const [loading, setLoading ] = useState(false);
     const [ startIndex, setStartIndex ] = useState(0)
-    const [cardItem, setCardItem ] = useState([]);
     const [{term}, dispatch ] = useStateValue();
     const { data } = useGoogleSearch(term, startIndex)
 
@@ -20,47 +17,35 @@ const SearchPage = () => {
         data?.items !== undefined ? setLoading(false) : setLoading(true)
     }, [data])
 
-    const handleModal = cacheId => { 
-        const card = data?.items.filter(item => item.cacheId === cacheId)
-        const newcard = cardItem.push(card[0])
-        setCardItem(newcard)
-    }
     return (
-        <div className="searchPage">
-
-            <div className="searchPage__header">
-
-                <div className="searchPage__logoContainer">
+        <div className={`search-page ${darkMode ? 'dark-light' : 'light-mode'}`}>
+            <div className="search-page-header">
+                <div className="search-page-logo-container">
                     <Link  to="/">
-                        <img className="searchPage__logo" src={Logo} alt="/"/>
+                        <img className="search-page-logo" src={Logo} alt="/"/>
                     </Link>
                 </div>
 
-                <div className="searchPage__headerBody">
+                <div className="search-page-header-body">
                     <Search hideButton term={term}/>
                 </div>
             </div>
-
-
-
-
-            <div className="searchPage__body">
+            <div className="search-page-body">
                 <div className="latest-news">
-                    <NewsAPI query={ term } />
+                    <NewsAPI query={term} />
                 </div> 
-
                 <div className="search-results">
                 {
                     !loading ? (
-                        <div className="searchPage__results">
+                        <div className="search-page-results">
                             <h3>Your search results</h3>
                             <hr></hr>
-                            <p className="searchPage__resultCount">
+                            <p className="search-page-resultCount">
                                 About { data?.searchInformation.formattedTotalResults} results in ({data?.searchInformation.formattedSearchTime}) for { term }.
                             </p>
                             {
                                 data?.items.map((item, index) => (
-                                    <div className="searchPage__result searchPageResultShadow" key={index}>
+                                    <div className="search-page-result search-pageResult-shadow" key={index}>
 
                                         <div className="image-container">
                                             <a href={item.link} className="result-site">
@@ -68,7 +53,7 @@ const SearchPage = () => {
                                                     item.pagemap?.cse_image?.length > 0 && 
                                                     item.pagemap?.cse_image[0]?.src && 
                                                     (
-                                                        <img className="searchPage__resultImage"src={
+                                                        <img className="search-page-result-image"src={
                                                             item.pagemap?.cse_image[0]?.src
                                                         } alt=""/>
                                                     )
@@ -76,22 +61,19 @@ const SearchPage = () => {
                                                 <span>{ item.displayLink}</span>
                                             </a>
 
-                                            <a href={item.link} className="searchPage__resultTitle">
+                                            <a href={item.link} className="search-page-result-title">
                                                 <h2>{item.title}</h2>
                                             </a>
                                         </div>
-
                                         <div className="text-container">
-                                            <a href={item.link} className="searchPage__resultTitle">
+                                            <a href={item.link} className="search-page-result-title">
                                                 <h2>{item.title}</h2>
                                             </a>
-                                            <p className="searchPage__resultSnippet">{item.snippet}</p>
+                                            <p className="search-page-result-snippet">{item.snippet}</p>
                                         </div>
-
                                     </div>
                                 ))
                             }
-
                             <div className="pagination-section">
                                 <div 
                                     onClick={() => setStartIndex(startIndex - 10)} 
@@ -104,7 +86,6 @@ const SearchPage = () => {
                                     >Next
                                 </div>
                             </div>
-
                         </div>
                     ) 
                     : 
