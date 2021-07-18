@@ -1,14 +1,9 @@
-
-
 import React from 'react';
-
-
-
 // import components
-import Setting_search from '../search/search';
+// import Setting_search from '../search/search';
 
 // import css
-import './privacy.css';
+import './PrivacyPage.css';
 
 
 class Privacy extends React.Component {
@@ -16,26 +11,16 @@ class Privacy extends React.Component {
 
     return (
       <div className="privacy_container" >
-
-        <Setting_search page_name="Privacy and Settings" />
-
         <div className="privacy" >
-          
           <div className="browse_privacy" >
             <div className="loginPassword" >
-              <h3 >
-                Login and password
-              </h3>
-
-              <p >
-                <p >
+              <h3 >Login and password</h3>
+              <p>
+                <p>
                   <input type="checkbox" /> &nbsp; Ask to save logins and passwords for websites
                 </p>
-
                 <button > Exceptions.. </button>
-                
               </p>
-
               <p className="pad_left" >
                 <p >
                   <input type="checkbox" /> &nbsp; Autofill logins and passwords
@@ -54,14 +39,14 @@ class Privacy extends React.Component {
               <p className="pad_left" >
                 <p >
                   <input type="checkbox" /> &nbsp; Show alerts about passwords for breached websites
-                  <a href="" > Learn more </a>
+                  <a href="/" > Learn more </a>
                 </p>
               </p>
 
               <p >
                 <p >
                   <input type="checkbox" /> &nbsp; Use a Primary Password
-                  <a href="" > Learn more </a>
+                  <a href="/" > Learn more </a>
                 </p>
 
                 <button>Change Primary Password</button>

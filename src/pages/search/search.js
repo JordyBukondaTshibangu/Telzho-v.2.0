@@ -1,10 +1,9 @@
 
 import React from "react";
 import "./search.css";
-import Setting from "../../setting";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import Dashboard from "../dashboard/board";
-import User from "../user/user_profile";
+import User from "../userPage/UserprofilePage";
 
 
 
