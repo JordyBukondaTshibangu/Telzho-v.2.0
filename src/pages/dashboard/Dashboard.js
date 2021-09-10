@@ -1,12 +1,12 @@
 import React from 'react'
 import './Dashboard.css'
-import Tabs from '../../components/dashboardElement/Tabs'
-import Appearance from '../../components/dashboardElement/Appearance'
-import Zoom from '../../components/dashboardElement/Zoom'
-import Language from '../../components/dashboardElement/Language'
-import Download from '../../components/dashboardElement/Download'
-import TelzoUpdate from '../../components/dashboardElement/TelzoUpdate'
-import Browsing from '../../components/dashboardElement/Browsing'
+import Tabs from '../../components/statisticOne/Tabs'
+import Appearance from '../../components/statisticOne/Appearance'
+import Zoom from '../../components/statisticOne/Zoom'
+import Language from '../../components/statisticOne/Language'
+import Download from '../../components/statisticOne/Download'
+import TelzoUpdate from '../../components/statisticOne/TelzoUpdate'
+import Browsing from '../../components/statisticOne/Browsing'
 
 const Dashboard = ({darkMode}) => {
 	return (
